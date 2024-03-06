@@ -48,17 +48,20 @@ export class AddEditCarComponent implements OnInit, OnChanges {
   }
 
   addCar() {
-    this.carService.addCar(this.carForm.value).subscribe(
-      response => {
-        this.clickAdd.emit(response);
-        this.closeModal();
-        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Car added' });
-      },
-      error => {
-        this.messageService.add({ severity: 'error', summary: 'Error', detail: error });
-        console.log('Error occured');
-      }
-    )
+    // this.carService.addCar(this.carForm.value).subscribe(
+    //   response => {
+    //     this.clickAdd.emit(response);
+    //     this.closeModal();
+    //     this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Car added' });
+    //   },
+    //   error => {
+    //     this.messageService.add({ severity: 'error', summary: 'Error', detail: error });
+    //     console.log('Error occured');
+    //   }
+    // )
+
+    this.carService.addCar(this.carForm.value)
+
   }
 
   editCar() {
