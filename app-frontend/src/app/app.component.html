@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" routerLink="/car">Cars</a>
+        <a class="nav-item nav-link" routerLink="/customer">Customers</a>
+        <a class="nav-item nav-link" routerLink="/rentals">Rental Transactions</a>
+        <a class="nav-item nav-link" routerLink="/service-history">Service Histories</a>
+        <a class="nav-item nav-link" routerLink="/filters">Stats & Fiters</a>
+    </div>
+</nav>
+
+<!-- main content container -->
+<div class="jumbotron">
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</div>
