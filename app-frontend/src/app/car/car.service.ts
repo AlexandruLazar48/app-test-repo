@@ -36,7 +36,11 @@ export class CarService {
     public deleteCar(carId: number): Observable<void> {
         // return this.http.delete<void>(`${this.apiServerUrl}/car/${carId}`);
         let indexToDelete = this.cars.findIndex(obj => obj.id === carId);
-        this.cars.splice(indexToDelete, 1);
+        console.log(indexToDelete);
+        
+        if(indexToDelete != -1) {
+            this.cars.splice(indexToDelete, 1);
+        }
         return of()
     
     }

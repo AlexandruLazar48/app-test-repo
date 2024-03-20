@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarService } from './car/car.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CarModule } from './car/car.module';
 import { FiltersModule } from './filters/filters.module';
 
@@ -19,7 +19,7 @@ import { FiltersModule } from './filters/filters.module';
     CarModule,
     FiltersModule
   ],
-  providers: [CarService],
+  providers: [CarService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
